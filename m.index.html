@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Muhammed Mase - Professional Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    html, body { font-family: 'Poppins', 'Cairo', sans-serif; }
+    .animated { opacity: 0; transition: all 1s ease; }
+    .show { opacity: 1; transform: translateY(0); }
+    .skill-card:hover { transform: translateY(-5px); transition: 0.3s; }
+    .profile-img { border: 4px solid rgba(255,255,255,0.3); transition: all 0.3s ease; }
+    .profile-img:hover { transform: scale(1.05); }
+    .dark .profile-img { border-color: rgba(255,255,255,0.1); }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-indigo-500 to-purple-700 text-white min-h-screen transition-colors duration-500 dark:from-gray-900 dark:to-black" id="body">
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full bg-opacity-90 backdrop-blur-sm z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#home" class="text-2xl font-bold">Muhammed Mase</a>
+      <div class="flex space-x-4 rtl:space-x-reverse">
+        <button onclick="changeLang('en')" class="px-2 py-1 text-sm bg-white bg-opacity-20 rounded">EN</button>
+        <button onclick="changeLang('tr')" class="px-2 py-1 text-sm bg-white bg-opacity-20 rounded">TR</button>
+        <button onclick="changeLang('ar')" class="px-2 py-1 text-sm bg-white bg-opacity-20 rounded">AR</button>
+      </div>
+      <button onclick="toggleDarkMode()" class="p-2 rounded-full bg-white bg-opacity-20 text-lg">🌙</button>
+    </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="py-20 md:py-40 relative">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 mb-10 md:mb-0">
+        <h1 class="text-4xl md:text-5xl font-bold animated show" style="animation-delay: 0.3s">I'm <span class="text-indigo-400">Muhammed Mase</span></h1>
+        <p class="text-xl mt-4 mb-8 animated" style="animation-delay: 0.5s">Computer Engineering Graduate | Web & Mobile Developer | Data Analyst</p>
+        <div class="flex space-x-4 rtl:space-x-reverse animated" style="animation-delay: 0.7s">
+          <a href="#portfolio" class="px-6 py-3 bg-white text-indigo-800 rounded-full hover:bg-indigo-50 transition">My Portfolio</a>
+          <a href="#contact" class="px-6 py-3 bg-indigo-500 text-white rounded-full hover:bg-indigo-600 transition">Hire Me</a>
+        </div>
+      </div>
+      <div class="md:w-1/2">
+        <div class="relative">
+          <img src="img/1.jpeg" alt="Profile" class="w-full h-auto rounded-lg shadow-2xl profile-img animated" style="animation-delay: 0.9s">
+          <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-white bg-opacity-10 backdrop-blur-sm dark:bg-gray-800">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-12 text-center animated" style="animation-delay: 0.3s">About Me</h2>
+      <p class="text-lg mb-8 animated" style="animation-delay: 0.5s">
+        My name is Muhammed Mase. I was born in Aleppo, Syria, and I studied high school and university in Turkey, where I studied computer engineering at Istanbul Rumeli University. I have experience in many areas of programming, such as front-end and back-end web development, app programming in React, data analysis and visualization, data science, and deep learning, which I am still developing myself in.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 bg-white bg-opacity-10 backdrop-blur-sm dark:bg-gray-800">
+    <h2 class="text-3xl font-bold mb-12 text-center animated" style="animation-delay: 0.3s">Skills</h2>
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-xl font-semibold mb-6">Proficient In</h3>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-white bg-opacity-20 p-6 rounded-lg text-center animated" style="animation-delay: 0.5s">
+            <i class="fab fa-html5 text-4xl text-orange-500 mb-3"></i>
+            <p>HTML5</p>
+          </div>
+          <div class="bg-white bg-opacity-20 p-6 rounded-lg text-center animated" style="animation-delay: 0.7s">
+            <i class="fab fa-css3-alt text-4xl text-blue-500 mb-3"></i>
+            <p>CSS3</p>
+          </div>
+          <div class="bg-white bg-opacity-20 p-6 rounded-lg text-center animated" style="animation-delay: 0.9s">
+            <i class="fab fa-js text-4xl text-yellow-500 mb-3"></i>
+            <p>JavaScript</p>
+          </div>
+          <div class="bg-white bg-opacity-20 p-6 rounded-lg text-center animated" style="animation-delay: 1.1s">
+            <i class="fab fa-react text-4xl text-blue-500 mb-3"></i>
+            <p>React.js</p>
+          </div>
+          <div class="bg-white bg-opacity-20 p-6 rounded-lg text-center animated" style="animation-delay: 1.3s">
+            <i class="fab fa-php text-4xl text-violet-500 mb-3"></i>
+            <p>PHP</p>
+          </div>
+          <div class="bg-white bg-opacity-20 p-6 rounded-lg text-center animated" style="animation-delay: 1.5s">
+            <i class="fas fa-database text-4xl text-green-500 mb-3"></i>
+            <p>MySQL</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-6">Currently Learning</h3>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-white bg-opacity-20 p-6 rounded-lg text-center animated" style="animation-delay: 0.5s">
+            <i class="fab fa-nextjs text-4xl text-blue-500 mb-3"></i>
+            <p>Next.js</p>
+          </div>
+          <div class="bg-white bg-opacity-20 p-6 rounded-lg text-center animated" style="animation-delay: 0.7s">
+            <i class="fab fa-python text-4xl text-blue-500 mb-3"></i>
+            <p>Python</p>
+          </div>
+          <div class="bg-white bg-opacity-20 p-6 rounded-lg text-center animated" style="animation-delay: 0.9s">
+            <i class="fab fa-node-js text-4xl text-green-500 mb-3"></i>
+            <p>NestJS</p>
+          </div>
+          <div class="bg-white bg-opacity-20 p-6 rounded-lg text-center animated" style="animation-delay: 1.1s">
+            <i class="fab fa-django text-4xl text-red-500 mb-3"></i>
+            <p>Django</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="py-20 bg-white bg-opacity-10 backdrop-blur-sm dark:bg-gray-800">
+    <h2 class="text-3xl font-bold mb-12 text-center animated" style="animation-delay: 0.3s">My Work</h2>
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="bg-white bg-opacity-20 p-6 rounded-lg hover:bg-opacity-30 transition animated" style="animation-delay: 0.5s">
+        <h3 class="text-xl font-bold mb-4">E-Commerce Store</h3>
+        <p class="mb-4">A fully functional online store built with React frontend and Laravel backend.</p>
+        <a href="#" class="inline-block bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600 transition">View Project</a>
+      </div>
+      <div class="bg-white bg-opacity-20 p-6 rounded-lg hover:bg-opacity-30 transition animated" style="animation-delay: 0.7s">
+        <h3 class="text-xl font-bold mb-4">Task Management App</h3>
+        <p class="mb-4">A mobile application for task management with notifications, built with Flutter and React Native.</p>
+        <a href="#" class="inline-block bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600 transition">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 bg-white bg-opacity-10 backdrop-blur-sm dark:bg-gray-800">
+    <h2 class="text-3xl font-bold mb-12 text-center animated" style="animation-delay: 0.3s">Services</h2>
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="bg-white bg-opacity-20 p-6 rounded-lg hover:bg-opacity-30 transition animated" style="animation-delay: 0.5s">
+        <i class="fas fa-globe text-4xl text-indigo-500 mb-4"></i>
+        <h3 class="text-xl font-bold mb-2">Web Development</h3>
+        <p>Building responsive websites, e-commerce platforms, and CMS systems.</p>
+      </div>
+      <div class="bg-white bg-opacity-20 p-6 rounded-lg hover:bg-opacity-30 transition animated" style="animation-delay: 0.7s">
+        <i class="fas fa-mobile-alt text-4xl text-indigo-500 mb-4"></i>
+        <h3 class="text-xl font-bold mb-2">Mobile Apps</h3>
+        <p>Developing cross-platform apps using Flutter and React Native.</p>
+      </div>
+      <div class="bg-white bg-opacity-20 p-6 rounded-lg hover:bg-opacity-30 transition animated" style="animation-delay: 0.9s">
+        <i class="fas fa-cogs text-4xl text-indigo-500 mb-4"></i>
+        <h3 class="text-xl font-bold mb-2">Web Systems</h3>
+        <p>Building admin panels, user management, and database solutions.</p>
+      </div>
+      <div class="bg-white bg-opacity-20 p-6 rounded-lg hover:bg-opacity-30 transition animated" style="animation-delay: 1.1s">
+        <i class="fas fa-chart-line text-4xl text-indigo-500 mb-4"></i>
+        <h3 class="text-xl font-bold mb-2">Data Analysis</h3>
+        <p>Processing and visualizing data using Python and AI tools.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-white bg-opacity-10 backdrop-blur-sm dark:bg-gray-800">
+    <h2 class="text-3xl font-bold mb-12 text-center animated" style="animation-delay: 0.3s">Get In Touch</h2>
+    <div class="container mx-auto px-6">
+      <form action="https://formspree.io/f/moqybzjr" method="POST" class="max-w-md mx-auto">
+        <div class="mb-4">
+          <input type="text" name="name" placeholder="Your Name" required class="w-full p-2 bg-transparent border-b-2 border-indigo-500 focus:outline-none">
+        </div>
+        <div class="mb-4">
+          <input type="email" name="email" placeholder="Your Email" required class="w-full p-2 bg-transparent border-b-2 border-indigo-500 focus:outline-none">
+        </div>
+        <div class="mb-4">
+          <textarea name="message" rows="4" placeholder="Your Message" required class="w-full p-2 bg-transparent border-b-2 border-indigo-500 focus:outline-none"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-indigo-500 text-white py-2 px-4 rounded hover:bg-indigo-600 transition">Send Message</button>
+      </form>
+      <div class="mt-12 text-center">
+        <p class="text-lg mb-4">Or reach out directly:</p>
+        <div class="flex justify-center space-x-4">
+          <a href="mailto:muhammedmase@gmail.com" class="text-indigo-500 hover:text-indigo-400">muhammedmase@gmail.com</a>
+          <a href="https://wa.me/905055368988" target="_blank" class="text-indigo-500 hover:text-indigo-400">+90 505 536 89 88</a>
+          <a href="https://linkedin.com/in/mohamed-mase-69a98227a" target="_blank" class="text-indigo-500 hover:text-indigo-400">LinkedIn Profile</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 bg-white bg-opacity-10 backdrop-blur-sm dark:bg-gray-800">
+    <div class="container mx-auto px-6 text-center">
+      <p>&copy; 2025 Muhammed Mase. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Animation on Scroll
+    window.addEventListener('scroll', () => {
+      const animatedElements = document.querySelectorAll('.animated');
+      animatedElements.forEach(element => {
+        if (element.getBoundingClientRect().top < window.innerHeight * 0.8) {
+          element.classList.add('show');
+        }
+      });
+    });
+
+    // Language Switcher
+    const texts = {
+      en: {
+        homeTitle: "I'm Muhammed Mase",
+        homeSubtitle: "Computer Engineering Graduate | Web & Mobile Developer | Data Analyst",
+        aboutTitle: "About Me",
+        aboutText: "My name is Muhammed Mase. I was born in Aleppo, Syria, and I studied high school and university in Turkey, where I studied computer engineering at Istanbul Rumeli University. I have experience in many areas of programming, such as front-end and back-end web development, app programming in React, data analysis and visualization, data science, and deep learning, which I am still developing myself in.",
+        skillsTitle: "Skills",
+        servicesTitle: "Services",
+        portfolioTitle: "My Work",
+        contactTitle: "Get In Touch",
+        hireMe: "Hire Me",
+        myPortfolio: "My Portfolio"
+      },
+      tr: {
+        homeTitle: "Ben Muhammed Mase",
+        homeSubtitle: "Bilgisayar Mühendisi | Web ve Mobil Geliştirici | Veri Analisti",
+        aboutTitle: "Hakkımda",
+        aboutText: "Benim adım Muhammed Mase. Suriye'nin Halep kentinde doğdum ve lise ve üniversite eğitimimi Türkiye'de, İstanbul Rumeli Üniversitesi'nde Bilgisayar Mühendisliği bölümünde tamamladım. Frontend ve backend web geliştirme, React ile uygulama geliştirme, veri analizi ve görselleştirme, veri bilimi ve derin öğrenme gibi birçok programlama alanına tecrübem var ve bu alanlarda kendimi geliştirmeye devam ediyorum.",
+        skillsTitle: "Beceriler",
+        servicesTitle: "Hizmetler",
+        portfolioTitle: "İşlerim",
+        contactTitle: "İletişime Geçin",
+        hireMe: "Beni Kira Et",
+        myPortfolio: "Portföyüm"
+      },
+      ar: {
+        homeTitle: "أنا محمد ماس",
+        homeSubtitle: "خريج هندسة الحاسوب | مطور ويب وجوال | محلل بيانات",
+        aboutTitle: "عني",
+        aboutText: "اسمي محمد ماس. وُلدت في حلب، سوريا، ودرست المرحلة الثانوية والجامعة في تركيا، حيث درست هندسة الحاسوب في جامعة إسطنبول روميلي. لدي خبرة في العديد من مجالات البرمجة، مثل تطوير الويب من الجهة الأمامية والخلفية، وبرمجة التطبيقات باستخدام React، وتحليل وتصور البيانات، وعلوم البيانات، والتعلم العميق، والتي ما زلت أطور نفسي فيها.",
+        skillsTitle: "المهارات",
+        servicesTitle: "الخدمات",
+        portfolioTitle: "مشاريعي",
+        contactTitle: "اتصل بي",
+        hireMe: "اخترني",
+        myPortfolio: "موقعي"
+      }
+    };
+
+    let darkMode = false;
+
+    function changeLang(lang) {
+      document.documentElement.lang = lang;
+      if (lang === 'ar') {
+        document.body.dir = 'rtl';
+      } else {
+        document.body.dir = 'ltr';
+      }
+      localStorage.setItem('lang', lang);
+      
+      // Update Texts
+      document.getElementById('homeTitle').innerText = texts[lang].homeTitle;
+      document.getElementById('homeSubtitle').innerText = texts[lang].homeSubtitle;
+      document.getElementById('aboutTitle').innerText = texts[lang].aboutTitle;
+      document.getElementById('aboutText').innerHTML = texts[lang].aboutText;
+      document.getElementById('skillsTitle').innerText = texts[lang].skillsTitle;
+      document.getElementById('servicesTitle').innerText = texts[lang].servicesTitle;
+      document.getElementById('portfolioTitle').innerText = texts[lang].portfolioTitle;
+      document.getElementById('contactTitle').innerText = texts[lang].contactTitle;
+      document.querySelector('[href="#hireMe"]').innerText = texts[lang].hireMe;
+      document.querySelector('[href="#myPortfolio"]').innerText = texts[lang].myPortfolio;
+    }
+
+    function toggleDarkMode() {
+      darkMode = !darkMode;
+      document.body.classList.toggle('dark', darkMode);
+      localStorage.setItem('darkMode', darkMode);
+      document.querySelector('button[onclick="toggleDarkMode()"]').textContent = darkMode ? '☀️' : '🌙';
+    }
+
+    // Load Preferences
+    const savedLang = localStorage.getItem('lang') || 'en';
+    const savedDarkMode = localStorage.getItem('darkMode') === 'true';
+    changeLang(savedLang);
+    if (savedDarkMode) {
+      toggleDarkMode();
+    }
+  </script>
+</body>
+</html>

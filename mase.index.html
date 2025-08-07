@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Muhammed Mase</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    html, body { font-family: 'Poppins', 'Cairo', sans-serif; }
+    .skill-card:hover { transform: translateY(-5px); transition: 0.3s; }
+    .profile-img { border: 4px solid rgba(255,255,255,0.3); transition: all 0.3s ease; }
+    .profile-img:hover { transform: scale(1.05); }
+    .dark .profile-img { border-color: rgba(255,255,255,0.1); }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-indigo-500 to-purple-700 text-white min-h-screen transition-colors duration-500 dark:from-gray-900 dark:to-black" id="body">
+  <header class="text-center p-6 relative">
+    <div class="absolute top-4 left-4 flex space-x-2 rtl:space-x-reverse">
+      <button onclick="changeLang('en')" class="px-2 py-1 text-sm bg-white bg-opacity-20 rounded">EN</button>
+      <button onclick="changeLang('tr')" class="px-2 py-1 text-sm bg-white bg-opacity-20 rounded">TR</button>
+      <button onclick="changeLang('ar')" class="px-2 py-1 text-sm bg-white bg-opacity-20 rounded">AR</button>
+    </div>
+    <div class="absolute top-4 right-4">
+      <button onclick="toggleDarkMode()" class="p-2 rounded-full bg-white bg-opacity-20 text-lg">🌙</button>
+    </div>
+    <h1 class="text-4xl font-bold" id="title">Muhammed Mase</h1>
+    <p class="text-xl mt-2" id="subtitle">Frontend Developer & Data Enthusiast</p>
+  </header>
+
+  <main class="max-w-5xl mx-auto p-6 space-y-10 pt-10">
+    <!-- Profile Picture -->
+    <section class="flex justify-center">
+      <div class="w-64 h-64 rounded-full overflow-hidden shadow-2xl profile-img">
+        <img src="img/1.jpeg" alt="Profile" class="object-cover w-full h-full"/>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-lg shadow-lg">
+      <h2 class="text-2xl font-bold mb-4" id="about-title">About Me</h2>
+      <p id="about-text">
+        My name is Muhammed Mase. I was born in Aleppo, Syria, and I studied high school and university in Turkey, where I studied computer engineering at Istanbul Rumeli University. I have experience in many areas of programming, such as front-end and back-end web development, app programming in React, data analysis and visualization, data science, and deep learning, which I am still developing myself in.
+      </p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-lg shadow-lg">
+      <h2 class="text-2xl font-bold mb-6" id="skills-title">Skills</h2>
+      
+      <h3 class="text-xl font-semibold mb-4" id="proficient">Proficient in</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+        <div class="skill-card bg-indigo-50 dark:bg-gray-800 p-4 rounded-lg text-center hover:shadow-lg transition">
+          <i class="fab fa-html5 text-3xl text-orange-500"></i>
+          <h3 class="mt-2 font-medium">HTML5</h3>
+        </div>
+        <div class="skill-card bg-indigo-50 dark:bg-gray-800 p-4 rounded-lg text-center hover:shadow-lg transition">
+          <i class="fab fa-css3-alt text-3xl text-blue-500"></i>
+          <h3 class="mt-2 font-medium">CSS3</h3>
+        </div>
+        <div class="skill-card bg-indigo-50 dark:bg-gray-800 p-4 rounded-lg text-center hover:shadow-lg transition">
+          <i class="fab fa-js text-3xl text-yellow-500"></i>
+          <h3 class="mt-2 font-medium">JavaScript</h3>
+        </div>
+        <div class="skill-card bg-indigo-50 dark:bg-gray-800 p-4 rounded-lg text-center hover:shadow-lg transition">
+          <i class="fab fa-react text-3xl text-blue-400"></i>
+          <h3 class="mt-2 font-medium">React.js</h3>
+        </div>
+        <div class="skill-card bg-indigo-50 dark:bg-gray-800 p-4 rounded-lg text-center hover:shadow-lg transition">
+          <i class="fab fa-php text-3xl text-violet-600"></i>
+          <h3 class="mt-2 font-medium">PHP</h3>
+        </div>
+        <div class="skill-card bg-indigo-50 dark:bg-gray-800 p-4 rounded-lg text-center hover:shadow-lg transition">
+          <i class="fas fa-database text-3xl text-green-600"></i>
+          <h3 class="mt-2 font-medium">MySQL</h3>
+        </div>
+        <div class="skill-card bg-indigo-50 dark:bg-gray-800 p-4 rounded-lg text-center hover:shadow-lg transition">
+          <i class="fab fa-python text-3xl text-blue-600"></i>
+          <h3 class="mt-2 font-medium">Python</h3>
+        </div>
+        <div class="skill-card bg-indigo-50 dark:bg-gray-800 p-4 rounded-lg text-center hover:shadow-lg transition">
+          <i class="fas fa-code text-3xl text-gray-700"></i>
+          <h3 class="mt-2 font-medium">Go</h3>
+        </div>
+      </div>
+
+      <h3 class="text-xl font-semibold mb-4" id="learning">Currently Learning / Exploring</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="p-4 bg-gray-100 dark:bg-gray-700 rounded-lg text-center">
+          <div class="w-12 h-12 mx-auto bg-indigo-100 dark:bg-indigo-900 rounded-full flex items-center justify-center text-indigo-600 dark:text-indigo-300 font-bold">N</div>
+          <h3 class="mt-2 text-sm">Next.js</h3>
+        </div>
+        <div class="p-4 bg-gray-100 dark:bg-gray-700 rounded-lg text-center">
+          <div class="w-12 h-12 mx-auto bg-indigo-100 dark:bg-indigo-900 rounded-full flex items-center justify-center text-indigo-600 dark:text-indigo-300 font-bold">E</div>
+          <h3 class="mt-2 text-sm">Express.js</h3>
+        </div>
+        <div class="p-4 bg-gray-100 dark:bg-gray-700 rounded-lg text-center">
+          <div class="w-12 h-12 mx-auto bg-indigo-100 dark:bg-indigo-900 rounded-full flex items-center justify-center text-indigo-600 dark:text-indigo-300 font-bold">N</div>
+          <h3 class="mt-2 text-sm">NestJS</h3>
+        </div>
+        <div class="p-4 bg-gray-100 dark:bg-gray-700 rounded-lg text-center">
+          <div class="w-12 h-12 mx-auto bg-indigo-100 dark:bg-indigo-900 rounded-full flex items-center justify-center text-indigo-600 dark:text-indigo-300 font-bold">D</div>
+          <h3 class="mt-2 text-sm">Django</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-lg shadow-lg">
+      <h2 class="text-2xl font-bold mb-4" id="contact-title">Contact Me</h2>
+      <p class="mb-6">Feel free to reach out!</p>
+      <div class="space-y-3 text-lg">
+        <div class="flex items-center gap-3">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:muhammedmase@gmail.com" class="hover:text-indigo-300">muhammedmase@gmail.com</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <i class="fab fa-whatsapp"></i>
+          <a href="https://wa.me/905055368988" target="_blank" class="hover:text-indigo-300">+90 505 536 89 88</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <i class="fab fa-linkedin"></i>
+          <a href="https://linkedin.com/in/mohamed-mase-69a98227a" target="_blank" class="hover:text-indigo-300">LinkedIn Profile</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center p-6 text-sm opacity-80">
+    <p>&copy; 2025 Muhammed Mase. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const texts = {
+      en: {
+        title: "Muhammed Mase",
+        subtitle: "Frontend Developer & Data Enthusiast",
+        "about-title": "About Me",
+        "about-text": "My name is Muhammed Mase. I was born in Aleppo, Syria, and I studied high school and university in Turkey, where I studied computer engineering at Istanbul Rumeli University. I have experience in many areas of programming, such as front-end and back-end web development, app programming in React, data analysis and visualization, data science, and deep learning, which I am still developing myself in.",
+        "skills-title": "Skills",
+        proficient: "Proficient in",
+        learning: "Currently Learning / Exploring",
+        "contact-title": "Contact Me"
+      },
+      tr: {
+        title: "Muhammed Mase",
+        subtitle: "Frontend Geliştirici & Veri Tutkunu",
+        "about-title": "Hakkımda",
+        "about-text": "Benim adım Muhammed Mase. Suriye'nin Halep kentinde doğdum ve lise ve üniversite eğitimimi Türkiye'de, İstanbul Rumeli Üniversitesi'nde Bilgisayar Mühendisliği bölümünde tamamladım. Frontend ve backend web geliştirme, React ile uygulama geliştirme, veri analizi ve görselleştirme, veri bilimi ve derin öğrenme gibi birçok programlama alanına tecrübem var ve bu alanlarda kendimi geliştirmeye devam ediyorum.",
+        "skills-title": "Beceriler",
+        proficient: "Uzman Olduğum Alanlar",
+        learning: "Şu Anda Öğreniyorum / Keşfediyorum",
+        "contact-title": "İletişim"
+      },
+      ar: {
+        title: "محمد ماس",
+        subtitle: "مطوّر واجهة أمامية ومهووس بالبيانات",
+        "about-title": "عني",
+        "about-text": "اسمي محمد ماس. وُلدت في حلب، سوريا، ودرست المرحلة الثانوية والجامعة في تركيا، حيث درست هندسة الحاسوب في جامعة إسطنبول روميلي. لدي خبرة في العديد من مجالات البرمجة، مثل تطوير الويب من الجهة الأمامية والخلفية، وبرمجة التطبيقات باستخدام React، وتحليل وتصور البيانات، وعلوم البيانات، والتعلم العميق، والتي ما زلت أطور نفسي فيها.",
+        "skills-title": "المهارات",
+        proficient: "إتقان في",
+        learning: "أتعلم حاليًا / أستكشف",
+        "contact-title": "اتصل بي"
+      }
+    };
+
+    let darkMode = false;
+
+    function changeLang(lang) {
+      document.querySelectorAll("[id]").forEach(el => {
+        if (texts[lang][el.id]) {
+          if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+            el.placeholder = texts[lang][el.id];
+          } else {
+            el.innerHTML = texts[lang][el.id];
+          }
+        }
+      });
+      document.documentElement.lang = lang;
+      if (lang === 'ar') {
+        document.body.dir = 'rtl';
+      } else {
+        document.body.dir = 'ltr';
+      }
+      localStorage.setItem('lang', lang);
+    }
+
+    function toggleDarkMode() {
+      darkMode = !darkMode;
+      document.getElementById('body').classList.toggle('dark', darkMode);
+      document.querySelector('button[onclick="toggleDarkMode()"]').textContent = darkMode ? '☀️' : '🌙';
+      localStorage.setItem('darkMode', darkMode);
+    }
+
+    // Load preferences
+    const savedLang = localStorage.getItem('lang') || 'en';
+    const savedDarkMode = localStorage.getItem('darkMode') === 'true';
+
+    changeLang(savedLang);
+    if (savedDarkMode) {
+      toggleDarkMode();
+    }
+  </script>
+</body>
+</html>
